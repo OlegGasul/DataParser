@@ -50,7 +50,7 @@ public class Parser {
     }
 
     private boolean buy(int size) {
-        SortedList<ListItem> list = getOrCreate(RowType.BID);
+        SortedList<ListItem> list = getOrCreate(RowType.ASK);
         if (list.size() == 0)
             return false;
 
