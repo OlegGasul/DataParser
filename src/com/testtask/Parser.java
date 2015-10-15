@@ -162,7 +162,7 @@ public class Parser {
 
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("Usage: input_file_path output_file_path");
+            System.out.println("Usage: [input_file_path] [output_file_path]");
             System.exit(1);
         }
 
