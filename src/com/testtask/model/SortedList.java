@@ -1,18 +1,15 @@
 package com.testtask.model;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class SortedList<E> extends AbstractList<E> {
-    private Comparable comparable = null;
-    private ArrayList<E> internalList = new ArrayList<E>();
+    private Comparator comparator;
+    private LinkedList<E> internalList = new LinkedList<E>();
 
     @Override
     public void add(int position, E e) {
         internalList.add(e);
-        Collections.sort(internalList, (Comparator<? super E>) comparable);
+        Collections.sort(internalList, comparator);
     }
 
     @Override
@@ -29,7 +26,7 @@ public class SortedList<E> extends AbstractList<E> {
 
     }
 
-    public SortedList(Comparable comparable) {
-        this.comparable = comparable;
+    public SortedList(Comparator comparator) {
+        this.comparator = comparator;
     }
 }
